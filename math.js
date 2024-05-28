@@ -45,3 +45,34 @@ console.log({
 });
 
 console.groupEnd('triangulo')
+
+console.group('circle')
+
+const radioCirculo=3;
+const diametroCirculo= radioCirculo*2;
+const PI = 3.1415;
+
+const circunferencia = diametroCirculo*PI;
+const areaCirculo= (radioCirculo**2)*PI;
+
+console.log({
+    radioCirculo,
+    diametroCirculo,
+    circunferencia,
+    areaCirculo,
+    PI,
+});
+
+function calcularCirculo(radio){
+    const diametro= radio*2;
+    const radioalcuadrado= Math.pow(radio,2);
+    return{
+        circunferencia:diametro*Math.PI,
+        area:radioalcuadrado*Math.PI,
+    };
+}
+
+
+
+
+console.groupEnd('circle')
