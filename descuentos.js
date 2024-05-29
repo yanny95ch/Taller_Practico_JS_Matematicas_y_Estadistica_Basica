@@ -6,7 +6,18 @@ const pResult=document.querySelector('#result');
 
 btn.addEventListener ('click', calcularPrecioConCupon);
 
-/*function calcularPrecioConDescuento(){
+//const arrayObjeto= undefined; //['cupones': descuento]{}?
+ 
+const cuoponObj ={
+    'Luli_2024':30,
+    'AZra_2025':25,
+    'valido*20':20,
+    'cuponcito':15,
+};
+/* Este codigo va en la clase de  aplicar  % 
+ con la  const inputDiscount=
+
+function calcularPrecioConDescuento(){
     //(P*(100-D)) /100
     const price= Number(inputPrice.value);
     const discount= Number(inputDiscount.value);
@@ -39,7 +50,16 @@ function calcularPrecioConCupon(){
 
     let discount;
 
-    switch (coupon) {
+    if(cuoponObj[coupon]){
+        discount= cuoponObj[coupon];
+    }else{
+        pResult.innerText= 'El Cupon no es Valido';
+        return;
+    }
+
+//esteos condicionale acontinuacion, son de la clase  de aplicar cupones de %; solo que se usaron 2 condicionales como forma de ver las diferentes soluciones posibles
+
+    /*switch (coupon) {
         case 'Luli_2024':
             discount=30;
             break;
@@ -50,7 +70,7 @@ function calcularPrecioConCupon(){
             pResult.innerText= 'El Cupon no es Valido';
             return;
         
-    }
+    }*/
 
     /*if(coupon == 'Luli_2024'){
         discount = 30;
