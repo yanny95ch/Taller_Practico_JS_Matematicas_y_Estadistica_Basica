@@ -28,12 +28,7 @@ const areatriangulo = (ladoTrianguloBase*alturaTriangulo)/2;
 
 
 function calcularAlturaTriaEscaleno(lado1Base, lado2, lado3){
-    const Semiperimetro = (lado1Base + lado2 +lado3) /2
-    console.log('semiperometro: '+ Semiperimetro);
-    const alturaEscaleno= (2/lado1Base)*Math.sqrt(Semiperimetro*(Semiperimetro-lado1Base)*(Semiperimetro-lado2)*(Semiperimetro-lado3))
-    if(lado1Base!=lado2!=lado3){
-        return{alturaEscaleno}
-    }
+
 
 }
 
