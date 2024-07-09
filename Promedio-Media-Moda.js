@@ -48,18 +48,15 @@ function esImpar(lista){
     return lista.length % 2;
 }
 
-function calcularMediana (lista){
+function calcularMediana (listaDesordenada){
+    const lista = ordenarLista(listaDesordenada)
     const listaPar = esPar(lista);
 
     //Calculando mediana en lista Par
     if (listaPar) {
         const indexMitaListaPar = (lista.length / 2) -1;
         const indexMita2ListaPar = lista.length / 2 ;
-
-        //const mitaListaPar = lista[(lista.length / 2) -1];
-        //const mita2ListaPar = lista[lista.length / 2 ];
-
-        //const listaMitades = [mitaListaPar, mita2ListaPar];
+        
         const listaMitades = [];
             listaMitades.push(lista[indexMitaListaPar]);
             listaMitades.push(lista[indexMita2ListaPar]);
@@ -75,7 +72,28 @@ function calcularMediana (lista){
     }
 }
 
+// Ordenar lista ---------------------------------------
 
+
+function ordenarLista(listaDesordenada){
+    function ordenarListaSort(valorAcumulado, nuevoValor){
+      /* 
+      if (valorAcumulado > nuevoValor ) {
+            return 1;
+       } else if (valorAcumulado === nuevoValor){
+            return 0;
+       }else if (valorAcumulado < nuevoValor){
+            return -1 ;
+       }*/
+        return valorAcumulado - nuevoValor;
+    }
+    const lista = listaDesordenada.sort(ordenarListaSort);
+
+
+
+    return lista;
+
+}
 
 
 
