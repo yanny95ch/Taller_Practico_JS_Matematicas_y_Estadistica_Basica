@@ -39,6 +39,7 @@ calcularPromedio2([1,2,3])
 
 //--------------------------------------------------------------------------------
 
+//calculando mediana en una lista impar'
 
 function esPar(lista){
     return !(lista.length % 2);
@@ -50,8 +51,20 @@ function esImpar(lista){
 function calcularMediana (lista){
     const listaPar = esPar(lista);
 
+    //Calculando mediana en lista Par
     if (listaPar) {
-        //...
+        const indexMitaListaPar = (lista.length / 2) -1;
+        const indexMita2ListaPar = lista.length / 2 ;
+
+        //const mitaListaPar = lista[(lista.length / 2) -1];
+        //const mita2ListaPar = lista[lista.length / 2 ];
+
+        //const listaMitades = [mitaListaPar, mita2ListaPar];
+        const listaMitades = [];
+            listaMitades.push(lista[indexMitaListaPar]);
+            listaMitades.push(lista[indexMita2ListaPar]);
+            const medianaListaPar  = calcularPromedio (listaMitades)
+            return medianaListaPar
     }else{
         const indexMitadListaImpar = Math.floor(lista.length / 2) ;
         const medianaListaImpar = lista[indexMitadListaImpar];
@@ -61,3 +74,9 @@ function calcularMediana (lista){
         
     }
 }
+
+
+
+
+
+
