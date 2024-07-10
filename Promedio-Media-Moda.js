@@ -87,12 +87,9 @@ function ordenarLista(listaDesordenada){
        }*/
         return valorAcumulado - nuevoValor;
     }
+    // const lista = listaDesordenada.sort((a,b) => a-b);
     const lista = listaDesordenada.sort(ordenarListaSort);
-
-
-
     return lista;
-
 }
 //----------------------------------------------------------
 //Calcular Moda
@@ -109,9 +106,36 @@ function calcularModa (lista){
             }
         }
 
-    console.log(listaCount);
+
+        const listaArray = Object.entries(listaCount);
+        const  listaOrdenada = ordenarListaBidireccional(listaArray,1);
+        const listaOrdenadaMaxNumber = listaOrdenada[listaOrdenada.length - 1];
+        console.log(listaCount);
+        console.log(listaArray);
+        console.log(listaOrdenada);
+        console.log(listaOrdenadaMaxNumber);
+        console.log('la moda es:' + listaOrdenadaMaxNumber );
+        const moda = listaOrdenadaMaxNumber[0]
+        return moda
+
 }
 
+//----------
+function ordenarListaBidireccional(listaDesordenada, i){
+    function ordenarListaSort(valorAcumulado, nuevoValor){
+
+        return valorAcumulado[1] - nuevoValor[1];
+    }
+    // const lista = listaDesordenada.sort((a,b) => a-b);
+    const lista = listaDesordenada.sort(ordenarListaSort);
+    return lista;
+}
+
+
+
+
+
+    
 
 
 
