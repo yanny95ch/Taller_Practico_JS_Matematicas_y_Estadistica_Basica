@@ -1,5 +1,7 @@
 
-function calcularPromedio(lista){
+const PlatziMath = {};
+
+PlatziMath.calcularPromedio = function calcularPromedio(lista){
     //sumar todos los elementos del array / cantidad de elementos
     let sumaLista = 0
     
@@ -15,7 +17,7 @@ function calcularPromedio(lista){
 calcularPromedio([1,2,3])
 
 
-function calcularPromedio2 (lista){
+PlatziMath.calcularPromedio2 = function calcularPromedio2 (lista){
     function sumarTodosLosElementos(valorAcumulado,nuevoValor){
         return valorAcumulado + nuevoValor;
     }
@@ -41,14 +43,14 @@ calcularPromedio2([1,2,3])
 
 //calculando mediana en una lista impar'
 
-function esPar(lista){
+PlatziMath.esPar = function esPar(lista){
     return !(lista.length % 2);
 }
-function esImpar(lista){
+PlatziMath.esImpar = function esImpar(lista){
     return lista.length % 2;
 }
 
-function calcularMediana (listaDesordenada){
+PlatziMath.calcularMediana =  function calcularMediana (listaDesordenada){
     const lista = ordenarLista(listaDesordenada)
     const listaPar = esPar(lista);
 
@@ -75,7 +77,7 @@ function calcularMediana (listaDesordenada){
 // Ordenar lista ---------------------------------------
 
 
-function ordenarLista(listaDesordenada){
+PlatziMath.ordenarLista = function ordenarLista(listaDesordenada){
     function ordenarListaSort(valorAcumulado, nuevoValor){
       /* 
       if (valorAcumulado > nuevoValor ) {
@@ -94,7 +96,7 @@ function ordenarLista(listaDesordenada){
 //----------------------------------------------------------
 //Calcular Moda
 
-function calcularModa (lista){
+PlatziMath.calcularModa = function calcularModa (lista){
     const listaCount = {};
         for (let i = 0; i< lista.length; i++) {
             const elemento = lista[i];
@@ -121,7 +123,7 @@ function calcularModa (lista){
 }
 
 //----------
-function ordenarListaBidireccional(listaDesordenada, i){
+PlatziMath.ordenarListaBidireccional =  function ordenarListaBidireccional(listaDesordenada, i){
     function ordenarListaSort(valorAcumulado, nuevoValor){
 
         return valorAcumulado[1] - nuevoValor[1];
