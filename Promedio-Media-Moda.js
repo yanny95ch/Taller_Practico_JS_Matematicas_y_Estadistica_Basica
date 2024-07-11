@@ -1,5 +1,7 @@
 
-const PlatziMath = {};
+const PlatziMath = {
+    
+};
 
 PlatziMath.calcularPromedio = function calcularPromedio(lista){
     //sumar todos los elementos del array / cantidad de elementos
@@ -14,8 +16,6 @@ PlatziMath.calcularPromedio = function calcularPromedio(lista){
     return promedio;
 
 }
-calcularPromedio([1,2,3])
-
 
 PlatziMath.calcularPromedio2 = function calcularPromedio2 (lista){
     function sumarTodosLosElementos(valorAcumulado,nuevoValor){
@@ -37,7 +37,6 @@ PlatziMath.calcularPromedio2 = function calcularPromedio2 (lista){
     //lista.length
 
 }
-calcularPromedio2([1,2,3])
 
 //--------------------------------------------------------------------------------
 
@@ -136,7 +135,7 @@ PlatziMath.ordenarListaBidireccional =  function ordenarListaBidireccional(lista
 
 
 
-
+console.log(PlatziMath);
     
 
 
